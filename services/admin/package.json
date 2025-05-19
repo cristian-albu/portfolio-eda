@@ -1,0 +1,21 @@
+{
+  "name": "admin",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "init-portfolio": "bun run scripts/initializePortfolio.ts",
+    "delete-portfolio": "bun run scripts/deletePortfolio.ts"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.10.7",
+    "amqplib": "^0.10.8",
+    "hono": "^4.7.10"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["event", "data"],
+  "properties": {
+    "event": { "type": "string" },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    }
+  }
+}
