@@ -1,7 +1,7 @@
 import type { Context } from "hono";
 import SkillsRepository, { type T_CreateSkill } from "../repositories/SkillsRepository";
 import db from "../db/Db";
-import { ERRORS, METHODS, SUCCESS } from "../constants";
+import { ERRORS, SUCCESS } from "../constants";
 
 const skillsRepo = new SkillsRepository(db.getPortfolio());
 

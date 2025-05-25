@@ -19,7 +19,9 @@ export abstract class ModelRepository<T> implements I_Repository<T> {
 
   protected async execute(fn: () => Promise<T_RepoReturn<T>>) {
     try {
-      return await fn();
+      const data = await fn();
+
+      return data;
     } catch (error) {
       console.error(error);
       return { data: null, error: ERRORS.serverError };

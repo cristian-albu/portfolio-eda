@@ -23,11 +23,13 @@ export default class SkillsRepository extends ModelRepository<T_Skill> {
   public async findAll() {
     const query = "SELECT * FROM skills";
 
-    return this.execute(async () => {
+    const result = this.execute(async () => {
       const data = this.db.query<T_Skill, null>(query).all(null);
 
       return { data: data, error: null };
     });
+
+    return result as Promise<{ data: T_Skill[] | null; error: null | ERRORS }>;
   }
 
   public async findOne(id: number) {

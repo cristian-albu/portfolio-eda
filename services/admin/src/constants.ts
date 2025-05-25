@@ -1,3 +1,7 @@
+export const ORIGIN = "http://localhost:3000";
+
+export const PUBLIC_PATH = `${ORIGIN}/public`;
+
 export enum DATABASES {
   portfolio = "portfolio",
 }
